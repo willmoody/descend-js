@@ -3,9 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
-    constructor(){
-      super();
+
+    constructor(...args){
+      super(...args);
       this.state = {
         currentLevel: 0,
         phase: null,
@@ -36,7 +36,7 @@ class App extends Component {
             title: 'Floor Four',
             message: 'Each time you reach for one of the purple orbs, a powerful wave of deja vu overtakes you, and energy crackles from your fingertips. This Power was destined for you, or perhaps the other way around.'
           },
-               
+
         ],
         pc: {
             level: 0,
@@ -49,14 +49,16 @@ class App extends Component {
 
 
       }
-    }
+      this.hydrate = this.hydrate.bind(this);
+      this.lifeCycle = this.lifeCycle.bind(this);
+      this.generateLevel = this.generateLevel.bind(this);
+    };
     hydrate(){
       this.setState({
 
 
-        }
-      })
-    }
+      });
+    };
     lifeCycle(){
       if (this.state.cycling === false){
         this.setState({
@@ -64,12 +66,13 @@ class App extends Component {
         });
 
       }
-    }
-    generateMap(){
+    };
+    generateLevel(){
 
-    }
+    };
+render(){
     return (
-
+      <div>Hello World</div>
     );
   }
 }
