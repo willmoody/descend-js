@@ -66,13 +66,16 @@ class App extends Component {
         });
 
       }
+      console.log("lifeCycle is running");
     };
     generateLevel(){
 
     };
 render(){
     return (
-      <div>Hello World</div>
+      <div>Hello World
+        <button onClick={() => this.lifeCycle()}>Start</button>
+      </div>
     );
   }
 }
